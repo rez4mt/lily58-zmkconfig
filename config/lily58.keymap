@@ -13,6 +13,22 @@
 &mt { flavor = "tap-preferred"; };
 
 / {
+    macros {
+        screenshot: screenshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LG(R))>;
+            label = "SCREENSHOT";
+        };
+
+        formatcode: formatcode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(F))>;
+            label = "FORMATCODE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -26,15 +42,15 @@
             //                                   
 
             bindings = <
-&trans  &trans      &trans      &trans       &trans       &trans                                 &trans  &trans  &trans     &trans   &trans    &trans
-&trans  &kp Q       &kp W       &kp E        &kp R        &kp T                                  &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
-&trans  &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G                                  &kp H   &kp J   &kp K      &kp L    &kp SEMI  &trans
-&trans  &kp Z       &kp X       &kp C        &kp V        &kp B          &trans       &trans     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
-                                &trans       &lt 2 TAB    &kp BACKSPACE  &kp ENTER    &kp SPACE  &mo 1   &trans
+&trans  &trans      &trans      &trans       &trans       &trans                                     &trans  &trans       &trans       &trans      &trans              &trans
+&trans  &kp Q       &kp W       &kp E        &kp R        &kp T                                      &kp Y   &kp U        &kp I        &kp O       &kp P               &trans
+&trans  &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G                                      &kp H   &mt RSHFT J  &mt RCTRL K  &mt LALT L  &mt RGUI SEMICOLON  &trans
+&trans  &kp Z       &kp X       &kp C        &kp V        &kp B          &screenshot    &formatcode  &kp N   &kp M        &kp COMMA    &kp DOT     &kp FSLH            &trans
+                                &trans       &lt 1 TAB    &kp BACKSPACE  &kp ENTER      &kp SPACE    &mo 2   &trans
             >;
         };
 
-        lower_layer {
+        numbers {
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
             // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |       |
@@ -51,7 +67,7 @@
             >;
         };
 
-        raise_layer {
+        prgming {
             // ------------------------------------------------------------------------------------------------------------
             // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
             // |  ESC  |  *  |  -  |  {   |  }   |  $   |                   |  !   |   @   |   #   |  %   | BKSPC |       |
