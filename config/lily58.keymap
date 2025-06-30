@@ -42,11 +42,11 @@
             //                                   
 
             bindings = <
-&trans  &trans      &trans      &trans       &trans       &trans                                     &trans  &trans       &trans       &trans      &trans              &trans
-&trans  &kp Q       &kp W       &kp E        &kp R        &kp T                                      &kp Y   &kp U        &kp I        &kp O       &kp P               &trans
-&trans  &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G                                      &kp H   &mt RSHFT J  &mt RCTRL K  &mt LALT L  &mt RGUI SEMICOLON  &trans
-&trans  &kp Z       &kp X       &kp C        &kp V        &kp B          &screenshot    &formatcode  &kp N   &kp M        &kp COMMA    &kp DOT     &kp FSLH            &trans
-                                &trans       &kp TAB      &kp BACKSPACE  &lt 1 ENTER    &kp SPACE    &mo 2   &trans
+&trans  &trans      &trans      &trans       &trans         &trans                               &trans  &trans       &trans       &trans      &trans              &trans
+&trans  &kp Q       &kp W       &kp E        &kp R          &kp T                                &kp Y   &kp U        &kp I        &kp O       &kp P               &trans
+&trans  &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F    &kp G                                &kp H   &mt RSHFT J  &mt RCTRL K  &mt LALT L  &mt RGUI SEMICOLON  &trans
+&trans  &kp Z       &kp X       &kp C        &kp V          &kp B    &screenshot    &formatcode  &kp N   &kp M        &kp COMMA    &kp DOT     &kp FSLH            &trans
+                                &trans       &kp BACKSPACE  &kp TAB  &lt 1 ENTER    &kp SPACE    &mo 2   &trans
             >;
         };
 
